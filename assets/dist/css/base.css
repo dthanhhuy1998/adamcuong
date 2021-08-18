@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --color-primary: #df3550;
+    --color-second: ;
+    --color-text: ;
+    --color-red: #DF3550;
+    --product-name: #010101;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* =====================  Animation =====================  */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes leftToRight {
+    to {
+        opacity: 1;
+        transform: translateX(10px);
+    }
+}
+@keyframes showNavSlide {
+    to {
+        opacity: 1;
+        left: -1%;
+        width: 102%;
+    }
+}
+@keyframes fadeIn2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(0.7);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        top: 50px;
+    }
+    to {
+        opacity: 1;
+        top: 28px;
+    }
+}
+/* =====================  End Animation =====================  */
+
+/* =====================  Style =====================  */
+.bg-grey {
+    background-color: #ebeae8;
+}
+.bagde--new {
+    color: #fff;
+    background-color: #3498DB;
+}
+.bagde--sale {
+    color: #34495E;
+    background-color: #F1C40F;
+}
+.lg-hidden {
+    display: none;
+}
+.btn--outline {
+    border: 1px solid var(--color-primary);
+}
+.btn--outline:hover {
+    border-color: var(--color-primary);
+    background: #fff;
+}
+.popup__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    animation: fadeIn2 linear 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup__overlay.hidden {
+    display: none;
+}
+.popup {
+    width: 1000px;
+    max-height: 80vh;
+    background-color: #fff;
+    z-index: 1;
+    border-radius: 10px;
+    animation: growth linear 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.popup__image {
+    width: 45%;
+    overflow-y: hidden;
+}
+.popup__image img {
+    width: 100%;
+}
+.popup__content {
+    width: 55%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10vh;
+    position: relative;
+}
+.popup__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.popup__close img {
+    max-width: 45px;
+}
+.form__register {
+    margin-top: 30px;
+}
+.form__register .form-group {
+    margin-bottom: 20px;
+}
+.form__register .form-group .form-control {
+    border-bottom: 2px solid var(--color-primary);
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.form__register .btn.btn--outline {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+}
+/* =====================  End Style =====================  */
